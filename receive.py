@@ -1,7 +1,7 @@
-from gpiozero import LightSensor
+from gpiozero import SmoothedInputDevice
 from time import sleep
 
-light_sensor = LightSensor(18)
+light_sensor = SmoothedInputDevice(18)
 
 while True:
     print(light_sensor.value)
