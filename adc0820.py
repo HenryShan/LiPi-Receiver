@@ -15,11 +15,11 @@ class ADC0820(CompositeDevice):
             db5=DigitalInputDevice(db5),
             db6=DigitalInputDevice(db6),
             db7=DigitalInputDevice(db7),
-            rd_n=DigitalOutputDevice(rd_n, active_high=False),
-            int_n=DigitalInputDevice(int_n),
-            cs_n=DigitalOutputDevice(cs_n, active_high=False),
-            ofl_n=DigitalInputDevice(ofl_n),
-            wr_n=DigitalOutputDevice(wr_n, active_high=False),
+            rd_n=DigitalOutputDevice(rd_n, False),
+            int_n=DigitalInputDevice(int_n, True),
+            cs_n=DigitalOutputDevice(cs_n, False),
+            ofl_n=DigitalInputDevice(ofl_n, True),
+            wr_n=DigitalOutputDevice(wr_n, False),
             mode=DigitalOutputDevice(mode)
         )
 
@@ -27,9 +27,9 @@ class ADC0820(CompositeDevice):
         if self.cs_n.is_active is not True:
             self.cs_n.on()
         if self.mode.value != 0:
-            self.mode.on()
+            self.mode.off()
         self.rd_n.on()
-        while self.int_n.is_active != 0:
+        while self.int_n.is_active is not True:
             continue
         data = (
             self.db7.value << 7 |
