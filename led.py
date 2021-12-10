@@ -10,6 +10,6 @@ GPIO.setup(clk, GPIO.OUT)
 
 for n in range(100000):
     GPIO.output(clk, GPIO.HIGH)
-    time.sleep(0.1)
+    time.sleep(0.0001)
     GPIO.output(clk, GPIO.LOW)
-    time.sleep(0.1)
+    time.sleep(0.0001)
