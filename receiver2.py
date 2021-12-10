@@ -20,7 +20,7 @@ GPIO.setup(b3, GPIO.IN)
 
 for n in range(100000):
     GPIO.output(clk, GPIO.HIGH)
-    print(b3 << 3 | b2 << 2 | b1 << 1 | b0)
+    print(b0)
     time.sleep(0.5)
     GPIO.output(clk, GPIO.LOW)
     print(b3 << 3 | b2 << 2 | b1 << 1 | b0)
