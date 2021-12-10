@@ -2,6 +2,9 @@ import sys
 import RPi.GPIO as GPIO
 import time
 
+def get_gpio_value(b0, b1, b2, b3):
+    return (GPIO.input(b3) << 3 | GPIO.input(b2) << 2 | GPIO.input(b1) << 1 | GPIO.input(b0))
+
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -20,9 +23,9 @@ GPIO.setup(b3, GPIO.IN)
 
 for n in range(100000):
     GPIO.output(clk, GPIO.HIGH)
-    print(b0)
-    time.sleep(0.5)
+    print(get_gpio_value(b0, b1, b2, b3))
+    time.sleep(0.2)
     GPIO.output(clk, GPIO.LOW)
-    print(b3 << 3 | b2 << 2 | b1 << 1 | b0)
-    time.sleep(0.5)
+    print(get_gpio_value(b0, b1, b2, b3))
+    time.sleep(0.2)
     
