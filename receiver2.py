@@ -41,9 +41,9 @@ GPIO.setup(b7, GPIO.IN)
 
 for n in range(100000):
     GPIO.output(clk, GPIO.HIGH)
-    print(get_gpio_value(b0, b1, b2, b3, b4, b5, b6, b7))
-    time.sleep(0.2)
+    # print(get_gpio_value(b0, b1, b2, b3, b4, b5, b6, b7))
+    time.sleep(0.1)
     GPIO.output(clk, GPIO.LOW)
     print(get_gpio_value(b0, b1, b2, b3, b4, b5, b6, b7))
-    time.sleep(0.2)
+    time.sleep(0.1)
     
