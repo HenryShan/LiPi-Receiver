@@ -34,6 +34,10 @@ GPIO.setup(b0, GPIO.IN)
 GPIO.setup(b1, GPIO.IN)
 GPIO.setup(b2, GPIO.IN)
 GPIO.setup(b3, GPIO.IN)
+GPIO.setup(b4, GPIO.IN)
+GPIO.setup(b5, GPIO.IN)
+GPIO.setup(b6, GPIO.IN)
+GPIO.setup(b7, GPIO.IN)
 
 for n in range(100000):
     GPIO.output(clk, GPIO.HIGH)
