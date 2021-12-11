@@ -1,7 +1,7 @@
 from transmit import transmit
 import sys
 
-period = 1000000
+period = 500000
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
