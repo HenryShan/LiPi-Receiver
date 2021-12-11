@@ -8,9 +8,8 @@ bits_num = 16
 header = "11000"
 terminate = "0010000100"
 end = "01101"
-period = 1000000
 
-def led_control(bits_list):
+def led_control(bits_list, period):
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     GPIO.setup(13, GPIO.OUT)
@@ -25,7 +24,7 @@ def led_control(bits_list):
     time.sleep((period - time.time_ns() % period) / 1000000000)
     GPIO.output(13, GPIO.LOW)
     
-def transmit(fileanme):
+def transmit(fileanme, period):
     # if len(sys.argv) != 2:
     #     sys.stderr.write('Should input file name')
     #     sys.exit(1)
@@ -34,7 +33,7 @@ def transmit(fileanme):
     print(data_bits)
     print(len(data_bits))
     while True:
-        led_control(data_bits)
+        led_control(data_bits, period)
         time.sleep(0.5)
 
 
