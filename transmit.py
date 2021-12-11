@@ -13,17 +13,17 @@ period = 1000000
 def led_control(bits_list):
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
-    GPIO.setup(18, GPIO.OUT)
-    GPIO.output(18, GPIO.LOW)
+    GPIO.setup(13, GPIO.OUT)
+    GPIO.output(13, GPIO.LOW)
     for bit in bits_list:
         time.sleep((period - time.time_ns() % period) / (period*1000))
         if bit == '1':
-            GPIO.output(18, GPIO.HIGH)
+            GPIO.output(13, GPIO.HIGH)
         else:
-            GPIO.output(18, GPIO.LOW)
+            GPIO.output(13, GPIO.LOW)
     
     time.sleep((period - time.time_ns() % period) / (period*1000))
-    GPIO.output(18, GPIO.LOW)
+    GPIO.output(13, GPIO.LOW)
     
 
 if __name__ == '__main__':
