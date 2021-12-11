@@ -8,7 +8,7 @@ bits_num = 16
 header = "11000"
 terminate = "0010000100"
 end = "01101"
-period = 1000000
+period = 10000000
 
 def led_control(bits_list):
     GPIO.setmode(GPIO.BCM)
