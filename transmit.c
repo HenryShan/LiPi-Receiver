@@ -1303,7 +1303,7 @@ static PyObject *__pyx_pf_8transmit_2transmit(CYTHON_UNUSED PyObject *__pyx_self
 static PyObject *__pyx_float_0_5;
 static PyObject *__pyx_int_13;
 static PyObject *__pyx_int_16;
-static PyObject *__pyx_int_10000000;
+static PyObject *__pyx_int_1000000;
 static PyObject *__pyx_int_1000000000;
 static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__5;
@@ -1312,7 +1312,7 @@ static PyObject *__pyx_codeobj__6;
 /* Late includes */
 
 /* "transmit.pyx":13
- * period = 10000000
+ * period = 1000000
  * 
  * def led_control(bits_list):             # <<<<<<<<<<<<<<
  *     GPIO.setmode(GPIO.BCM)
@@ -1960,7 +1960,7 @@ static PyObject *__pyx_pf_8transmit_led_control(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "transmit.pyx":13
- * period = 10000000
+ * period = 1000000
  * 
  * def led_control(bits_list):             # <<<<<<<<<<<<<<
  *     GPIO.setmode(GPIO.BCM)
@@ -2287,7 +2287,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
   /* "transmit.pyx":13
- * period = 10000000
+ * period = 1000000
  * 
  * def led_control(bits_list):             # <<<<<<<<<<<<<<
  *     GPIO.setmode(GPIO.BCM)
@@ -2321,7 +2321,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   __pyx_float_0_5 = PyFloat_FromDouble(0.5); if (unlikely(!__pyx_float_0_5)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_13 = PyInt_FromLong(13); if (unlikely(!__pyx_int_13)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_16 = PyInt_FromLong(16); if (unlikely(!__pyx_int_16)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_10000000 = PyInt_FromLong(10000000L); if (unlikely(!__pyx_int_10000000)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_1000000 = PyInt_FromLong(1000000L); if (unlikely(!__pyx_int_1000000)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1000000000 = PyInt_FromLong(1000000000L); if (unlikely(!__pyx_int_1000000000)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -2676,7 +2676,7 @@ if (!__Pyx_RefNanny) {
  * header = "11000"
  * terminate = "0010000100"             # <<<<<<<<<<<<<<
  * end = "01101"
- * period = 10000000
+ * period = 1000000
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_terminate, __pyx_kp_s_0010000100) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
 
@@ -2684,7 +2684,7 @@ if (!__Pyx_RefNanny) {
  * header = "11000"
  * terminate = "0010000100"
  * end = "01101"             # <<<<<<<<<<<<<<
- * period = 10000000
+ * period = 1000000
  * 
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_end, __pyx_kp_s_01101) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
@@ -2692,14 +2692,14 @@ if (!__Pyx_RefNanny) {
   /* "transmit.pyx":11
  * terminate = "0010000100"
  * end = "01101"
- * period = 10000000             # <<<<<<<<<<<<<<
+ * period = 1000000             # <<<<<<<<<<<<<<
  * 
  * def led_control(bits_list):
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_period, __pyx_int_10000000) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_period, __pyx_int_1000000) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
 
   /* "transmit.pyx":13
- * period = 10000000
+ * period = 1000000
  * 
  * def led_control(bits_list):             # <<<<<<<<<<<<<<
  *     GPIO.setmode(GPIO.BCM)
