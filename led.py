@@ -5,11 +5,12 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-clk = 5
+clk = 13
 GPIO.setup(clk, GPIO.OUT)
+period = 1000000
 
 while True:
-    time.sleep(0.001 - (time.time_ns() / 1000**3) % 0.001)
+    time.sleep((period - time.time_ns() % period) / 1000000000)
     GPIO.output(clk, GPIO.HIGH)
-    time.sleep(0.001 - (time.time_ns() / 1000**3) % 0.001)
+    time.sleep((period - time.time_ns() % period) / 1000000000)
     GPIO.output(clk, GPIO.LOW)
