@@ -16,13 +16,13 @@ def led_control(bits_list):
     GPIO.setup(13, GPIO.OUT)
     GPIO.output(13, GPIO.LOW)
     for bit in bits_list:
-        time.sleep((period - time.time_ns() % period) / (period*1000))
+        time.sleep((period - time.time_ns() % period) / 1000000000)
         if bit == '1':
             GPIO.output(13, GPIO.HIGH)
         else:
             GPIO.output(13, GPIO.LOW)
     
-    time.sleep((period - time.time_ns() % period) / (period*1000))
+    time.sleep((period - time.time_ns() % period) / 1000000000)
     GPIO.output(13, GPIO.LOW)
     
 
