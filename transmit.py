@@ -25,12 +25,11 @@ def led_control(bits_list):
     time.sleep((period - time.time_ns() % period) / 1000000000)
     GPIO.output(13, GPIO.LOW)
     
-
-if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        sys.stderr.write('Should input file name')
-        sys.exit(1)
-    path = "./" + sys.argv[1]
+def transmit(fileanme)
+    # if len(sys.argv) != 2:
+    #     sys.stderr.write('Should input file name')
+    #     sys.exit(1)
+    path = "./" + fileanme
     data_bits = header + encode4b5b(path) + end
     print(data_bits)
     print(len(data_bits))
