@@ -7,7 +7,7 @@ GPIO.setwarnings(False)
 
 clk = 13
 GPIO.setup(clk, GPIO.OUT)
-period = 200000
+period = 1000000
 
 while True:
     time.sleep((period - time.time_ns() % period) / 1000000000)
