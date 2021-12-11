@@ -8,8 +8,8 @@ GPIO.setwarnings(False)
 clk = 5
 GPIO.setup(clk, GPIO.OUT)
 
-for n in range(100000):
+while True:
+    time.sleep(0.001 - (time.time_ns() / 1000**3) % 0.001)
     GPIO.output(clk, GPIO.HIGH)
-    time.sleep(0.001)
+    time.sleep(0.001 - (time.time_ns() / 1000**3) % 0.001)
     GPIO.output(clk, GPIO.LOW)
-    time.sleep(0.001)

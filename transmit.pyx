@@ -25,7 +25,7 @@ def led_control(bits_list):
     time.sleep((period - time.time_ns() % period) / 1000000000)
     GPIO.output(13, GPIO.LOW)
     
-def transmit(fileanme)
+def transmit(fileanme):
     # if len(sys.argv) != 2:
     #     sys.stderr.write('Should input file name')
     #     sys.exit(1)
